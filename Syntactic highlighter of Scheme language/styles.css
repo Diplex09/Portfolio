@@ -1,0 +1,43 @@
+.numbers {
+    color: skyblue;
+}
+
+.logicals {
+    color: darkgoldenrod;
+}
+
+.symbols {
+    color: forestgreen;
+}
+
+.operators {
+    color: red;
+}
+
+.identifiers {
+    color: gray;
+}
+
+.special-chars {
+    color: coral;
+}
+
+.comments {
+    color: plum;
+}
+
+.reserved-words {
+    color: saddlebrown;
+}
+
+.errors {
+    color: purple;
+}
+
+span {
+    font-size: 50px;
+}
+
+.no-space {
+    font-size: 0px;
+}

@@ -1,0 +1,9 @@
+(+ 2 3)
+  (abs -4)
+  (+ (* 2 3) 8)
+  (+ 3 4 5 1)
+  ;; note that + and * can take an arbitrary number of arguments
+  ;; actually so can - and / but you'll get a headache trying to remember
+  ;; what it means
+  ;;
+  ;; semicolon means the rest of the line is a comment 
