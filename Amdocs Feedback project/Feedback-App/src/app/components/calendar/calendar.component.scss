@@ -1,0 +1,24 @@
+.title {
+    font-size: 0.8rem;
+    color: lightgray;
+}
+.today-date {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.date-list {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    .date-day {
+        max-width: 3rem;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .date-event {
+        hr {
+            border-top: 1px solid rgba(white, 0.3);
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile {
+    ion-col {
+        display: flex;
+        align-items: center;
+        div{
+            text-align: left;
+            .name {
+                font-weight: bold;
+            }
+            .position {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    ion-icon {
+        font-size: 4rem;
+    }
+}
+
+.list {
+    ion-list {
+        background: none;
+        ion-item {
+            --background: none;
+        }
+    }
+    ion-icon {
+        padding-right: 1rem;
+    }
+}
+
+.sign-out {
+    ion-icon {
+        padding-right: 0.5rem;
+    }
+}
+.sign-out:focus, .sign-out:active {
+    outline: 0 !important;
+}
+
+.my-profile-button {
+    cursor: pointer;
+}
+
+.my-profile-button:focus {
+    outline: 0 !important;
+}

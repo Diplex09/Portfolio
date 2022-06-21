@@ -1,0 +1,59 @@
+<ion-content class="background">
+  <!-- Aquí va la información del chat -->
+  <header class="header">
+    <ion-grid>
+      <ion-row>
+        
+        <!-- Botón para regresar -->
+        <ion-col class="back-button" size="2">
+          <ion-button (click)="onClose()" fill="clear">
+            <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <!-- Ícono del área al que se esta hablando -->
+        <ion-col class="area" size="2">
+          <ion-icon [name]="areaIcon"></ion-icon>
+        </ion-col>
+
+        <!-- Información del chat -->
+        <ion-col class="info" size="4">
+          <h3 class="ticket-area" *ngIf="area">{{ area }}</h3>
+        </ion-col>
+
+        <!-- Estado del chat -->
+        <ion-col class="status" size="4" *ngIf="ticket">
+          <p *ngIf="ticket.anonymous">Anonymous chat</p>
+          <p *ngIf="!ticket.anonymous">Non anonymous chat</p>
+          <a (click)="closeTicket( ticket )"><p *ngIf="admin && ticket.active" class="close-ticket">Click to close ticket</p></a>
+          <p *ngIf="admin && !ticket.active" class="close-ticket">Ticket closed</p>
+        </ion-col>    
+      </ion-row>
+    </ion-grid>
+  </header>
+
+  <!-- Aquí va todo el chat -->
+  <main class="chat-window">
+    <div *ngFor="let chat of messages" class="message">
+      <div *ngIf="chat.from_user" class="client-message">
+        <p>{{ chat.text }}</p>
+      </div>
+      <div *ngIf="!chat.from_user" class="server-message">
+        <p>{{ chat.text }}</p>
+      </div>
+    </div>
+  </main>
+</ion-content>
+
+<ion-content class="footer">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="11">
+        <ion-textarea type="text" placeholder="Write here..." [(ngModel)]="mensaje"></ion-textarea>
+      </ion-col>
+      <ion-col class="send-icon" size="1">
+        <ion-icon name="send" (click)="send()"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

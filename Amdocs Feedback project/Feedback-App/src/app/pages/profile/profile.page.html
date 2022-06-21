@@ -1,0 +1,55 @@
+<header>
+  <app-navigation [noDefault]="true"></app-navigation>
+  <!-- <script src="profile.js" async></script> -->
+</header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <div class ="background"></div>
+    <ion-row class="raise-content">
+      <ion-col class="center-img">
+          <ion-avatar class="img-style">
+            <img src="../../../assets/images/profilePhoto.png" alt="Foto de perfil">
+          </ion-avatar>
+      </ion-col>
+      <ion-col>
+        <h1 id="emName">{{user?.nombre}} {{user?.apellido_paterno}} {{user?.apellido_materno}}</h1>
+        <p>Job:
+          <br> {{user?.job_title}}</p>
+        <h2><br>Contact</h2><p>{{user?.phone_number}}<br> {{user?.email}}</p>
+      </ion-col>
+    </ion-row>
+
+
+
+      <ion-row>
+        <h2>Settings</h2>
+      </ion-row>
+
+      <ion-row>
+
+        <ion-col>
+          <h3>Notifications</h3>
+          <ion-card>
+            <ion-list>
+              <ion-item>
+                <ion-label>Receive notifications by e-mail</ion-label>
+                <ion-toggle slot="start" name="e-mail" color="medium" checked></ion-toggle>
+              </ion-item>
+              <ion-item>
+                <ion-label>Recieve notifications by SMS</ion-label>
+                <ion-toggle slot="start" name="SMS" color="medium" checked></ion-toggle>
+              </ion-item>
+            </ion-list>
+          </ion-card>
+        </ion-col>
+
+      </ion-row>
+
+      <ion-row>
+        <ion-button (click)="presentAlertConfirm()" expand="block" color="danger">Report a problem </ion-button>
+      </ion-row>
+
+  </ion-grid>
+</ion-content>
+

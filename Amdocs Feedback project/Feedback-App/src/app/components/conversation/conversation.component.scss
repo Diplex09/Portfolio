@@ -1,0 +1,150 @@
+.background {
+    --background: var( --ion-color-amdocs-secondary );
+}
+
+// Header del chat
+.header {
+    position: sticky;
+    top: 0;
+    background: var( --ion-color-amdocs-primary );
+    width: 100%;
+    color: white;
+
+    .close-ticket {
+        color: red;
+        cursor: pointer;
+    }
+}
+
+// Botón para regresar a la otra pantalla
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-button {
+        --backgound: none;
+        --color: white;
+        --background-hover: white;
+    }
+    ion-icon {
+        font-size: 2em;
+    }
+}
+
+// Icono del area al que se esta hablando
+.area {
+    text-align: right;
+
+    ion-icon {
+        margin-top: 10%;
+        font-size: 2rem;
+    }
+}
+
+// Informacion del chat dentro del header
+.info {
+
+    h3, p {
+        margin: 5px;
+    }
+
+    .ticket-area {
+        color: white;
+        text-transform: uppercase;
+    }
+    .ticket-id {
+        color: var(--ion-color-amdocs-secondary);
+    }
+}
+
+// La parte del estado dentro del header
+.status {
+    ion-badge, p {
+        margin: 5px;
+    }
+
+    p {
+        color: var(--ion-color-amdocs-secondary);
+    }
+}
+
+// Botónes de la parte inferior del chat
+.footer {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0 !important;
+    max-height: 6rem;
+    --background: var( --ion-color-amdocs-primary );
+
+    ion-textarea {
+        --background: white;
+        --color: black;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .send-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ion-icon {
+            color: white;
+            font-size: 1.5em;
+        }
+
+        ion-icon:hover {
+            color: var( --ion-color-amdocs-tertiary );
+        }
+
+    }
+}
+
+/** Clases para los mensajes **/
+.chat-window {
+    margin-bottom: 7rem;
+}
+
+.message {
+    width: 100%;
+    min-height: 3rem;
+    display: inline-block;
+}
+
+.client-message {
+    color: black;
+    background: var( --ion-color-amdocs-tertiary );
+    margin: 3px 10px;
+    padding: 5px;
+    width: 40%;
+    border-radius: 10px;
+    font-size: 1rem;
+    display: block;
+    float: right;
+
+    // Mobile
+    @media (max-width: 800px) {
+        width: 60%;
+    }
+}
+
+.server-message {
+    color: black;
+    background: white;
+    margin: 3px 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 40%;
+    font-size: 1rem;
+    display: block;
+    float: left;
+    
+    // Mobile
+    @media (max-width: 800px) {
+        width: 60%;
+    }
+}

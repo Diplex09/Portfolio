@@ -1,0 +1,101 @@
+CREATE TABLE IF NOT EXISTS Usuario (
+  _id VARCHAR(36) NOT NULL,
+  nombre VARCHAR(20) NOT NULL,
+  apellido_paterno VARCHAR(20) NOT NULL,
+  apellido_materno VARCHAR(20) NOT NULL,
+  email VARCHAR(30) NOT NULL,
+  password VARCHAR(64) NOT NULL,
+  is_admin TINYINT NOT NULL,
+  job_title VARCHAR(30) NOT NULL,
+  phone_number VARCHAR(13) NOT NULL,
+  PRIMARY KEY (_id)
+);
+
+CREATE TABLE IF NOT EXISTS Area (
+  _id VARCHAR(36) NOT NULL,
+  name VARCHAR(30) NOT NULL,
+  icon VARCHAR(30) NOT NULL,
+  active TINYINT NOT NULL,
+  PRIMARY KEY (_id)
+);
+
+CREATE TABLE IF NOT EXISTS Subarea (
+  _id VARCHAR(36) NOT NULL,
+  name VARCHAR(30) NOT NULL,
+  active TINYINT NOT NULL,
+  area VARCHAR(36) NULL,
+  PRIMARY KEY (_id),
+  CONSTRAINT area
+    FOREIGN KEY (area)
+    REFERENCES Area (_id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+CREATE TABLE IF NOT EXISTS Categoria (
+  _id VARCHAR(36) NOT NULL,
+  name VARCHAR(30) NOT NULL,
+  icon VARCHAR(30) NOT NULL,
+  active TINYINT NOT NULL,
+  PRIMARY KEY (_id)
+);
+
+CREATE TABLE IF NOT EXISTS Ticket (
+  _id VARCHAR(36) NOT NULL,
+  anonymous TINYINT NOT NULL,
+  rating INT NOT NULL,
+  user VARCHAR(36) NULL,
+  area VARCHAR(36) NULL,
+  sub_area VARCHAR(36) NULL,
+  category VARCHAR(36) NULL,
+  PRIMARY KEY (_id),
+  CONSTRAINT user
+    FOREIGN KEY (user)
+    REFERENCES Usuario (_id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT ticket_area
+    FOREIGN KEY (area)
+    REFERENCES Area (_id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT subarea
+    FOREIGN KEY (sub_area)
+    REFERENCES Subarea (_id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT category
+    FOREIGN KEY (category)
+    REFERENCES Categoria (_id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+CREATE TABLE IF NOT EXISTS Administrador_Area (
+  _id VARCHAR(36) NOT NULL,
+  area VARCHAR(36) NULL,
+  PRIMARY KEY (_id),
+  CONSTRAINT admin_user
+    FOREIGN KEY (_id)
+    REFERENCES Usuario (_id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT admin_area
+    FOREIGN KEY (area)
+    REFERENCES Area (_id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+CREATE TABLE IF NOT EXISTS Mensaje (
+  _id INTEGER PRIMARY KEY,
+  timestamp INT NOT NULL,
+  text TEXT(255) NOT NULL,
+  from_user TINYINT NOT NULL,
+  ticket VARCHAR(36) NULL,
+  CONSTRAINT ticket
+    FOREIGN KEY (ticket)
+    REFERENCES Ticket (_id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);

@@ -1,0 +1,109 @@
+// Titulo de la página
+.title {
+    min-height: 7rem;
+    ion-title {
+        font-size: 2.5rem;
+        padding-inline: 0;
+    }
+}
+
+// Lista de tickets
+ion-list {
+    width: 70%;
+    border-radius: 10px;
+    margin: 0 auto;
+
+    // Títulos de las columnas de la lista
+    ion-list-header {
+        margin-bottom: 20px;
+
+        ion-label {
+            font-size: 1.2rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+            // Mobile
+            @media (max-width: 800px) {
+                font-size: .7rem;
+            }
+        }   
+    }
+
+    // Cada uno de los items de la lista
+    .ticket {
+        margin: 10px auto;
+    }
+
+    // Mobile
+    @media (max-width: 800px) {
+        width: 95%;
+    }
+
+}
+
+// Íconos que indican el área de la lista
+.icons {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // Mobile
+    @media (max-width: 800px) {
+        font-size: 1.3rem;
+    }
+}
+
+// Información de cada uno de los chats
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        color: darkgray;
+        font-weight: 700;
+        font-size: .8rem;
+        text-transform: uppercase;
+        // Mobile
+        @media (max-width: 800px) {
+            font-size: .7rem;
+        }
+    }
+
+    .tipo {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: gray;
+        margin: 10px;
+        // Mobile
+        @media (max-width: 800px) {
+            font-size: .8rem;
+        }
+    }
+
+    .nombre {
+        font-size: .8rem !important;
+    }
+}
+
+// Columna de los estados
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-badge {
+        font-size: 1.2rem;
+        font-weight: 900;
+        // Mobile
+        @media (max-width: 800px) {
+            font-size: .7rem;
+        }
+    }
+}
+
+// Cuando no hay chats que mostrar
+.no-chats {
+    height: 100%;
+    width: 100%;
+}

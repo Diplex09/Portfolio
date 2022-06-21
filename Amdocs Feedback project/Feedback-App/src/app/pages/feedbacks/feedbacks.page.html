@@ -1,0 +1,20 @@
+<header>
+  <app-navigation [currentRouteIndex]="1"></app-navigation>
+</header>
+
+<ion-content class="animate__animated animate__fadeIn ion-padding">
+
+  <ion-grid>
+    <ion-row class="title">
+      <ion-col>
+        <ion-title mode="ios">Feedbacks</ion-title>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="align-center">
+          <app-reports-table class="animate__animated animate__fadeInUp animate__fast" [areas]="areas" [subareas]="subareas" [tickets]="tickets"></app-reports-table>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

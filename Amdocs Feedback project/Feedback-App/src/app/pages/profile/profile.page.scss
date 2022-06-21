@@ -1,0 +1,58 @@
+@media (max-width: 600px) {
+  .edit-button {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+h1, h2{
+  color:orange;
+}
+
+.flex{
+  display:flex;
+}
+
+ion-button{
+  color:medium;
+}
+
+ion-card {
+  border-radius: 1rem;
+}
+
+.background{
+  background-color: gray;
+  height: 200px;
+}
+
+.raise-content{
+  margin-top: -150px;
+}
+
+.center-img{
+  display: flex;
+  justify-content: flex-end;
+  padding-right:50px;
+}
+
+.img-style{
+  min-height:250px;
+  min-width:250px;
+  max-height:400px;
+  max-width:400px;
+}
+
+#editProfile {
+  background-color: darkgray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}

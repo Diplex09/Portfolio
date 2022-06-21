@@ -1,0 +1,153 @@
+<header>
+  <app-navigation [currentRouteIndex]="2"></app-navigation>
+</header>
+
+<ion-content class="ion-text-center ion-padding">
+
+  <ion-grid>
+
+    <!-- Título de la página -->
+    <ion-row class="title animate__animated animate__fadeIn">
+      <ion-col>
+        <ion-title mode="ios" class="title">Chats</ion-title>
+      </ion-col>
+    </ion-row>
+
+    <!-- La lista de los chats -->
+    <h1 *ngIf="tickets.length == 0">No tickets to show</h1>
+    <ion-row *ngIf="tickets.length > 0">
+      <ion-col>
+
+        <ion-list class="animate__animated animate__fadeInUp animate__fast">
+          
+          <!-- Cabecera de la lista -->
+          <ion-list-header>
+            <ion-grid fixed>
+              <ion-row>
+                <ion-col size="3">
+                  <ion-label>Area</ion-label>
+                </ion-col>
+                <ion-col size="3">
+                  <ion-label>Subarea</ion-label>
+                </ion-col>
+                <ion-col size="3">
+                  <ion-label>Category</ion-label>
+                </ion-col>
+                <ion-col size="3">
+                  <ion-label>Active</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list-header>
+
+          <ion-item *ngFor="let ticket of tickets" detail button (click)="onTicketSelected( ticket, false )">
+            <ion-grid fixed>
+              <ion-row class="ticket">
+                
+                <ion-col class="info" size="3">
+                  <!-- El área hacia la que va dirigida el ticket -->
+                  <ion-icon [name]="getAreaIcon( ticket.area )"></ion-icon>
+                  <label class="tipo nombre">{{ getAreaName(ticket.area) | titlecase }}</label>
+                </ion-col>
+      
+                <ion-col class="info" size="3">
+                  <!-- La información del ticket -->
+                  <label class="tipo nombre">{{ getSubareaName(ticket.sub_area) | titlecase }}</label>
+                </ion-col>
+      
+                <ion-col class="info" size="3">
+                  <!-- El status del ticket -->
+                  <label class="tipo nombre">{{ getCategoryName(ticket.category) | titlecase }}</label>
+                </ion-col>
+                
+                <ion-col class="info" size="3">
+                  <!-- El status del ticket -->
+                  <ion-icon name="checkmark-outline" color="success" *ngIf="ticket.active"></ion-icon>
+                  <ion-icon name="close-outline" color="danger" *ngIf="!ticket.active"></ion-icon>
+                </ion-col>
+              </ion-row>
+      
+      
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  
+  <!-- Para el administrador de area -->
+  <ion-grid *ngIf="isAdmin == 1">
+
+    <!-- Título de la página -->
+    <ion-row class="title animate__animated animate__fadeIn">
+      <ion-col>
+        <ion-title mode="ios" class="title">Chats from area</ion-title>
+      </ion-col>
+    </ion-row>
+
+    <!-- La lista de los chats -->
+    <h1 *ngIf="ticketsArea.length == 0">No tickets to show</h1>
+    <ion-row *ngIf="ticketsArea.length > 0">
+      <ion-col>
+
+        <ion-list class="animate__animated animate__fadeInUp animate__fast">
+          
+          <!-- Cabecera de la lista -->
+          <ion-list-header>
+            <ion-grid fixed>
+              <ion-row>
+                <ion-col size="3">
+                  <ion-label>Nombre</ion-label>
+                </ion-col>
+                <ion-col size="3">
+                  <ion-label>Subarea</ion-label>
+                </ion-col>
+                <ion-col size="3">
+                  <ion-label>Category</ion-label>
+                </ion-col>
+                <ion-col size="3">
+                  <ion-label>Active</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list-header>
+
+          <ion-item *ngFor="let ticket of ticketsArea" detail button (click)="onTicketSelected( ticket, true )">
+            <ion-grid fixed>
+              <ion-row class="ticket">
+                
+                <ion-col class="info" size="3">
+                  <!-- El área hacia la que va dirigida el ticket -->
+                  <label class="tipo nombre" *ngIf="!ticket.anonymous">{{ ticket.user }}</label>
+                  <label class="tipo nombre" *ngIf="ticket.anonymous">Anonymous</label>
+                </ion-col>
+      
+                <ion-col class="info" size="3">
+                  <!-- La información del ticket -->
+                  <label class="tipo nombre">{{ getSubareaName(ticket.sub_area) | titlecase }}</label>
+                </ion-col>
+      
+                <ion-col class="info" size="3">
+                  <!-- El status del ticket -->
+                  <label class="tipo nombre">{{ getCategoryName(ticket.category) | titlecase }}</label>
+                </ion-col>
+                
+                <ion-col class="info" size="3">
+                  <!-- El status del ticket -->
+                  <ion-icon name="checkmark-outline" color="success" *ngIf="ticket.active"></ion-icon>
+                  <ion-icon name="close-outline" color="danger" *ngIf="!ticket.active"></ion-icon>
+                </ion-col>
+              </ion-row>
+      
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

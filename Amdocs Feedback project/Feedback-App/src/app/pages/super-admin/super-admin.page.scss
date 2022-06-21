@@ -1,0 +1,171 @@
+/* TITULOS */
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+/* AREAS */
+.area-column {
+    margin: 10px;
+}
+
+.area {
+    min-width: 150px;
+    height: 150px;
+    background: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 800px) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .area-name {
+        font-weight: 900;
+        font-size: 1.3rem;
+        @media (max-width: 800px) {
+            font-weight: 400;
+            font-size: .8rem;  
+        }
+    }
+    .area-icon {
+        font-size: 2rem;
+        @media (max-width: 800px) {
+            display: none;
+        }
+    }
+}
+
+.area.active {
+    border: 4px solid var( --ion-color-success );
+    cursor: pointer;
+}
+.area.active:hover {
+    border: 8px solid var( --ion-color-success );
+}
+.area.active:focus {
+    background: var( --ion-color-success );
+    outline: 0 !important;
+}
+
+.area.inactive {
+    border: 4px solid var( --ion-color-danger );
+    color: grey;
+    cursor: pointer;
+    @media (max-width: 800px) {
+        color: white;
+    }
+}
+.area.inactive:hover {
+    border: 8px solid var( --ion-color-danger );
+    color: white;
+}
+.area.inactive:focus {
+    background: var( --ion-color-danger );
+    outline: 0 !important;
+    color: white;
+}
+
+.area.create {
+    border: 4px solid var( --ion-color-primary );
+    cursor: pointer;
+}
+.area.create:hover {
+    border: 8px solid var( --ion-color-primary );
+}
+.area.create:focus {
+    background: var( --ion-color-primary );
+    outline: 0 !important;
+}
+
+.drop-container {
+    min-width: 10rem;
+    min-height: 10rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+
+/* Buttons */
+.save-button {
+    font-weight: 900;
+}
+
+.report-button-section {
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.report-button {
+    font-weight: 900;
+    float: right;
+    margin-right: 10%;
+}
+
+/* Sections */
+section {
+    margin: 50px 0;
+}
+
+/* Graphs
+--------------------------------------------------------------*/
+.graph {
+  border-radius: 2rem;
+  background: darken(#333147, 10%);
+
+  ion-card-header {
+    text-align: center;
+  }
+
+  ion-card-content {
+    text-align: center;
+
+    .percent {
+      font-size: 2.8rem;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 395px) {
+      .percent {
+        font-size: 2rem;
+        top: 48%;
+      }
+    }
+  }
+}
+
+/* ----- SUBAREAS ----- */
+.subareas-list {
+    width: 100%;
+    padding-top: 0;
+
+    .area-divider {
+        font-weight: 900;
+        font-size: 1.5em;
+        color: var( --ion-color-amdocs-secondary );
+        margin-top: 0;
+    }
+
+    .subarea {
+        
+        ion-toggle {
+            margin: auto 20px;
+        }
+
+        .subarea-name {
+            color: var( --ion-color-amdocs-secondary );
+            font-weight: 600;
+            padding-left: 10px;
+        }
+
+    }
+
+}

@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true">
+  <header class="ion-text-center">
+    <img class="logo" src="../../../assets/amdocs.svg" alt="Amdocs logo">
+    <ion-text color="dark">
+      <h1 class="title">Your opinion is important to us.</h1>
+      <h1 class="subtitle">How was your experience with this ticket?</h1>
+    </ion-text>
+  </header>
+
+  <div class="box" id="box">
+    <h1 class="grade">{{ rating }}</h1>
+    <ion-range class="range" min="1" max="10" step="1" value="7" (ionChange)="onRate( $event )" snaps ticks="true" mode="ios">
+      <ion-icon size="large" slot="start" name="sad-outline"></ion-icon>
+      <ion-icon size="large" slot="end" name="happy-outline"></ion-icon>
+    </ion-range>
+    <ion-button (click)="onSubmit()" fill="outline">
+      Submit
+    </ion-button>
+    
+  </div>
+
+</ion-content>

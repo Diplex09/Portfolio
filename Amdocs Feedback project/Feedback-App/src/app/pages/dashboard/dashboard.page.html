@@ -1,0 +1,92 @@
+<header>
+  <app-navigation [currentRouteIndex]="0"></app-navigation>
+</header>
+
+<ion-content class=" ion-padding animate__animated animate__fadeIn">
+
+  <ion-grid fixed>
+    <ion-row>
+
+      <ion-col>
+
+        <!-- Add Feedback -->
+        <ion-row class="add-feedback">
+
+          <ion-col class="add-feedback-text">
+            <section>
+              <ion-label class="add-feedback-title"> Raise Ticket </ion-label> <br>
+              <ion-label> Submit a new ticket to an area. </ion-label> <br>
+              <div class="add-feedback-button no-outline" routerLink="/feedback">
+                <ion-button color="danger" mode="md" class="no-outline">
+                  <ion-icon name="add-outline"></ion-icon>
+                </ion-button>
+                <ion-label> New Ticket </ion-label>
+              </div>
+            </section>
+          </ion-col>
+
+          <ion-col class="add-feedback-image">
+            <ion-img src="../../../assets/feedback.png"></ion-img>
+          </ion-col>
+
+        </ion-row>
+
+        <!-- Last Feedbacks Table -->
+        <section class="past-feedbacks animate__animated animate__fadeInUp animate__fast">
+          <header>
+            <ion-toolbar>
+              <ion-title>Past Tickets</ion-title>
+            </ion-toolbar>
+          </header>
+          <ion-row>
+            <ion-col class="animate__animated animate__fadeInUp animate__fast">
+              <app-reports-table [limit]="4" [areas]="areas" [subareas]="subareas" [tickets]="tickets"></app-reports-table>
+            </ion-col>
+          </ion-row>
+        </section>
+
+        <!-- Feedbacks Info -->
+        <section class="animate__animated animate__fadeInUp animate__fast">
+          <header>
+            <ion-toolbar>
+              <ion-title>Tickets Info</ion-title>
+            </ion-toolbar>
+          </header>
+          <ion-row class="feedback-cards">
+            <ion-col size-md="4" size="6">
+              <ion-card color="amdocs-salmon">
+                <ion-card-header>
+                  <ion-card-title>
+                    4
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  Unread Tickets
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col size-md="4" size="6">
+              <ion-card color="amdocs-secondary">
+                <ion-card-header>
+                  <ion-card-title>
+                    7
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  Active Tickets
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </section>
+        
+      </ion-col>
+
+      <!-- Calendar -->
+      <ion-col size-md="3" size="12" class="animate__animated animate__fadeInRight animate__fast">
+        <app-calendar></app-calendar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

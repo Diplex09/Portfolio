@@ -1,0 +1,217 @@
+<ion-content>
+  
+  <!-- Barra de progreso -->
+  <ion-progress-bar [value]="progressbarValue"></ion-progress-bar>
+  
+  <!-- Slides -->
+  <ion-slides [options]="slideOpts" #slides>
+    
+    <!-- Seleccionar el tipo de feedback -->
+    <ion-slide>
+      
+      <ion-grid>
+        
+        <ion-row>
+          <ion-col>
+            <ion-text>
+              <h1 class="slide-title">Start by selecting to which department your Feedback is directed to.</h1>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            
+            <ion-grid class="categories">
+              <ion-row>
+                <ion-col *ngFor="let category of areas">
+                  
+                  <div [style]="categorySelected == category.name ? 'background: var( --ion-color-amdocs-tertiary );' : ''" class="category" (click)="onCategory( category._id )">
+                    <p class="category-name">{{ category.name | titlecase }}</p>
+                    <ion-icon [name]="category.icon" class="category-icon"></ion-icon>
+                  </div>
+                  
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+      
+      
+      
+    </ion-slide>
+
+    <!-- Seleccionar el sub-area a la que pertenece -->
+    <ion-slide>
+      
+      <ion-grid>
+        
+        <ion-row>
+          <ion-col>
+            <ion-text>
+              <h1 class="slide-title">Please select the topic to which your Feedback is related to.</h1>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            
+            <ion-grid class="categories">
+              <ion-row>
+                <ion-col *ngFor="let category of subareas">
+                  
+                  <div [style]="subcategorySelected == category.name ? 'background: var( --ion-color-amdocs-tertiary );' : ''" class="category" (click)="onSubCategory( category._id )">
+                    <p class="category-name">{{ category.name | titlecase }}</p>
+                  </div>
+                  
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+      
+      
+      
+    </ion-slide>
+    
+    <ion-slide>
+      
+      <ion-grid>
+        
+        <ion-row>
+          <ion-col>
+            <ion-text>
+              <h1 class="slide-title">Please select the type of Feedback you would like to make.</h1>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            
+            <ion-grid class="categories">
+              <ion-row>
+                <ion-col *ngFor="let ticket of categories">
+                  
+                  <div [style]="ticketSelected == ticket.name ? 'background: var( --ion-color-amdocs-tertiary );' : ''" class="category" (click)="onTicket( ticket._id )">
+                    <p class="category-name">{{ ticket.name | titlecase }}</p>
+                  </div>
+                  
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+
+    </ion-slide>
+
+    <ion-slide>
+      
+      <ion-grid>
+        
+        <ion-row>
+          <ion-col>
+            <ion-text>
+              <h1 class="slide-title">Please select if you would like to remain anonymous.</h1>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            <div class="anon-container">
+
+              <div [style]="anonSelected ? 'background: var( --ion-color-amdocs-magenta );' : ''" class="box anon" (click)="onAnonimity( true )">
+                <p class="anon-name">Hide identity</p>
+                <ion-icon name="eye-off-outline" class="anon-icon"></ion-icon>
+              </div>
+
+              <div [style]="anonSelected == false ? 'background: var( --ion-color-amdocs-tertiary );' : ''" class="box no-anon" (click)="onAnonimity( false )">
+                <p class="anon-name">Show identity</p>
+                <ion-icon name="eye-outline" class="anon-icon"></ion-icon>
+              </div>
+
+            </div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+
+
+    </ion-slide>
+    <ion-slide>
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text>
+              <h1 class="slide-title">Feel free to write the motive for the ticket.</h1>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="text-container">
+            <ion-textarea autoGrow [(ngModel)]="text" placeholder="Write here..." inputmode="text"></ion-textarea>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="onTextDone()" color="amdocs-tertiary">
+              NEXT
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text>
+              <h1 class="slide-title">Thanks for making a Feedback.</h1>
+              <h2 class="slide-subtitle">Our team is always eager to help with any situation. You will receive a mailed notification when a response has been given.</h2>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-text-center">            
+            <ion-button routerLink="/chat" color="amdocs-tertiary">
+              FINISH
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    
+  </ion-slides>
+</ion-content>
+
+
+<ion-footer *ngIf="showFooter">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onCancel()" color="dark">
+        CANCEL
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" *ngIf="progressbarValue > 0.3">
+      <ion-button (click)="onLastSlide()" color="dark">
+        BACK
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+

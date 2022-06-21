@@ -1,0 +1,62 @@
+<!-- Menu -->
+<ion-menu side="start" menuId="custom" contentId="main" class="menu" mode="ios" swipeGesture>
+
+  <!-- Header -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div>
+      <!-- Row Item -->
+      <ion-row *ngFor="let navItem of navigation">
+        <ion-icon [name]="navItem.icon"></ion-icon>
+        <ion-col>
+          <ion-item (click)="navigateTo(navItem)">{{navItem.name}}</ion-item>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-content>
+</ion-menu>
+<!-- Menu Button -->
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<!-- Content -->
+<ion-grid>
+  <ion-row class="container">
+
+    <!-- Navigation -->
+    <ion-col class="mobile">
+      <nav>
+        <ion-menu-button></ion-menu-button>
+      </nav>
+    </ion-col>
+
+    <!-- Logo -->
+    <ion-col class="logo">
+      <ion-img class="logo-dark" src="../../../assets/amdocswhite.svg" (click)="navigateTo('/dashboard')"></ion-img>
+    </ion-col>
+
+    <!-- Navigation -->
+    <ion-col class="desktop">
+      <nav class="desktop">
+        <ion-segment color="danger" mode="md" [value]="noDefault ? '' : navigation[currentRouteIndex].name">
+          <ion-segment-button *ngFor="let navItem of navigation" [value]="navItem.name" (click)="navigateTo(navItem)">
+            <ion-label>{{navItem.name}}</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </nav>
+    </ion-col>
+
+    <!-- Profile -->
+    <ion-col class="user">
+      <div class="desktop" (click)="presentPopover()" style="cursor: pointer;">
+        <ion-label class="name">{{user?.nombre}} {{user?.apellido_paterno}}</ion-label> <br>
+        <ion-label class="position">{{user?.job_title}}</ion-label>
+      </div>
+      <ion-icon (click)="presentPopover()" style="cursor: pointer;" name="person-circle-outline"></ion-icon>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>

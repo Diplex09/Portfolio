@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onClose()" class="back">
+        <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container" color="light">
+
+  <ion-text color="dark">
+    <h1>Final comments:</h1>
+  </ion-text>
+  <ion-textarea autoGrow="true" [(ngModel)]="message" inputmode="text" placeholder="Enter your comments here..." mode="ios" autofocus="true"></ion-textarea>
+  <ion-button class="submit" (click)="onSubmit()">
+    Send!
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,62 @@
+<div class="container">
+    
+    <!-- Theme classes dark, material, bootstrap -->
+    <ngx-datatable 
+      class="dark"
+      [limit]="limit" 
+      [rows]="tickets"
+      [scrollbarH]="true"
+      [rowHeight]="55" 
+      [columnMode]="'force'" 
+      [headerHeight]="50" 
+      [footerHeight]="50"
+      (activate)="onActivate($event)"
+      *ngIf="tickets.length > 0 && areas.length > 0 && subareas.length > 0">
+        <!-- Area -->
+        <ngx-datatable-column name="Area" prop='area' [resizeable]="false">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <div class="column-container">
+                    <ion-icon color="amdocs-salmon" [name]="getAreaIcon(value)"></ion-icon>
+                    {{getAreaName(value)}}
+                </div>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <!-- Created -->
+        <ngx-datatable-column name="Subarea" prop='sub_area' [resizeable]="false">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <div class="column-container">
+                    {{getSubareaName(value)}}
+                </div>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <!-- Reporter -->
+        <ngx-datatable-column name="Anonymous" prop='anonymous' [resizeable]="false">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <div class="column-container">
+                    <ion-icon [color]="value ? 'success' : 'danger'" [name]="getAnonValue(value)"></ion-icon>
+                </div>
+            </ng-template>
+        </ngx-datatable-column>
+        
+        <!-- Last -->
+        <ngx-datatable-column name="Rating" prop='rating' [resizeable]="false">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <div class="column-container">
+                    {{getRatingValue(value)}}
+                </div>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <!-- Status -->
+        <ngx-datatable-column name="Active" prop='active' [resizeable]="false">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <div class="column-container">
+                    <ion-icon name="checkmark-outline" color="success" *ngIf="value"></ion-icon>
+                    <ion-icon name="close-outline" color="danger" *ngIf="!value"></ion-icon>
+                </div>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>

@@ -1,0 +1,133 @@
+/* Title
+--------------------------------------------------------------*/
+
+.title {
+  text-align: center;
+  margin: 4rem 0;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  ion-icon {
+    font-size: 10rem;
+    position: absolute;
+    top: -50px;
+    color: rgba($color: #FFFFFF, $alpha: 0.2);
+
+  }
+  ion-title {
+    padding-inline: 0;
+    font-size: 3rem;
+  }
+}
+ion-title {
+  padding-inline: 0;
+  font-size: 2rem;
+  padding: 2rem 0;
+  padding-left: 1rem;
+}
+
+/* Data
+--------------------------------------------------------------*/
+.graph {
+  border-radius: 2rem;
+  background: darken(#333147, 10%);
+  ion-card-header {
+    text-align: center;
+  }
+   ion-card-content {
+     text-align: center;
+      .percent {
+        font-size: 3rem;
+        position: absolute;
+        top: 43%;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    @media (max-width: 395px) {
+      .percent {
+        font-size: 2rem;
+        top: 48%;
+      }
+    }
+   }
+  }
+
+/* Feedback Cards
+--------------------------------------------------------------*/
+.feedback-cards {
+  display: flex;
+  justify-content: center;
+  ion-title {
+    padding-left: 0;
+  }
+  ion-card {
+    border-radius: 1rem;
+    text-align: center;
+
+    ion-card-title {
+      font-size: 3rem;
+    }
+  }
+}
+
+/* Feedbacks table
+--------------------------------------------------------------*/
+.past-feedbacks {
+  margin-bottom: 2rem;
+}
+
+/* Add Feedback
+--------------------------------------------------------------*/
+.add-feedback {
+  display: flex;
+  align-items: center;
+  min-height: 15rem;
+
+  .add-feedback-text {
+    display: flex;
+    justify-content: center;
+
+    .add-feedback-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .no-outline:focus {
+      outline: 0 !important;
+    }
+
+    .add-feedback-button {
+      display: flex;
+      align-items: center;
+      padding-top: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+
+
+      ion-button {
+        --border-radius: 100%;
+        --padding-start: 0.5rem;
+        --padding-end: 0.5rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  .add-feedback-image {
+    display: flex;
+    justify-content: center;
+
+    ion-img {
+      max-width: 25rem;
+    }
+  }
+}
+
+ion-title {
+  padding-inline: 0;
+  font-size: 1.7rem;
+  padding: 2rem 0;
+  padding-left: 1rem;
+}

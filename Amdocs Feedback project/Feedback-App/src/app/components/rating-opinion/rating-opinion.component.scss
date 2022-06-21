@@ -1,0 +1,35 @@
+.container {
+    text-align: center;
+}
+
+ion-textarea {
+    --background: white;
+    --color: black;
+    --placeholder-color: grey;
+    --padding-start: 5px;
+    text-align: left;
+    margin: 30px auto 30px;
+
+    // Mobile
+    @media (max-width: 800px) {
+        min-height: 250px;
+        max-width: 85%;
+    }
+
+    // Desktop
+    @media (min-width: 800px) {
+        min-height: 150px;
+        max-width: 70%;
+    }
+}
+
+.submit {
+    margin-top: 30px;
+    text-transform: uppercase;
+    --background: linear-gradient( to right, #f99b39, #e91b8b );
+    --background-focus: linear-gradient( to right, #f99b39, #e91b8b );
+}
+
+.back {
+    --color: white;
+}

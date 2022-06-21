@@ -1,0 +1,109 @@
+
+
+/* Menu
+---------------------------------------------------------------------------------*/
+.menu {
+  background: rgba(black, 0.1);
+  
+  div {
+      padding-top: 1rem;
+
+      ion-row {
+          display: flex;
+          align-items: center;
+          font-size: 2rem;
+          padding: 1rem 0;
+
+          ion-icon {
+              padding-left: 1rem;
+          }
+          ion-col {
+              padding-right: 1rem;
+              ion-item {
+                --background: none;
+              }
+          }
+      }
+  }
+
+}
+
+/* Content
+---------------------------------------------------------------------------------*/
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    .logo {
+        min-width: 10rem;
+        max-width: 10rem;
+    }
+    // Se comentaron las siguientes lineas ya que el default para la aplicación será el color negro
+    /*
+    .logo-dark  {
+        display: none;
+    }
+    .logo-white  {
+        display: block;
+    }
+    */
+    // @media (prefers-color-scheme: dark) {
+    .logo-dark  {
+        display: block;
+        cursor: pointer;
+    }
+    .logo-dark:focus {
+        outline:0 !important;
+    }
+    .logo-white  {
+        display: none;
+    }
+    // }
+    .user {
+      display: flex;
+      align-items: center;
+      text-align: right;
+      justify-content: flex-end;
+      color: white;
+
+      .name {
+        font-weight: bold;
+        font-size: 0.8em;
+      }
+
+      .position {
+        font-size: 0.7rem;
+      }
+
+      ion-icon {
+        font-size: 3rem;
+        padding-left: 0.5rem;
+      }
+    }
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------*/
+nav.desktop {
+    padding-left: 1rem;
+    max-width: 40rem;
+}
+.mobile {
+    display: none;
+    max-width: 3rem;
+    font-size: 2rem;
+    ion-menu-button {
+        color: white;
+    }
+}
+.desktop {
+    display: block;
+}
+@media (max-width: 850px) {
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+}

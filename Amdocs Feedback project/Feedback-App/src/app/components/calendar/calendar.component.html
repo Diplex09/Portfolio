@@ -1,0 +1,18 @@
+<header>
+  <ion-label class="title">Calendar</ion-label> <br>
+  <ion-label class="today-date">
+    {{weekdays[datesArray[0].getDay()] + ', ' + datesArray[0].getDate() + ' ' + monthNames[datesArray[0].getMonth()]}}
+  </ion-label>
+</header>
+
+<ion-grid>
+  <ion-row *ngFor="let date of datesArray" class="date-list">
+    <ion-col class="date-day">
+      <ion-label>{{date.getDate()}}</ion-label> <br>
+      <strong>{{weekdays[date.getDay()].substr(0,3)}}</strong>
+    </ion-col>
+    <ion-col class="date-event">
+      <hr>
+    </ion-col>
+  </ion-row>
+</ion-grid>

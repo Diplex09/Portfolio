@@ -1,0 +1,240 @@
+<header>
+  <app-navigation [currentRouteIndex]="0"></app-navigation>
+</header>
+
+<ion-content class="ion-padding animate__animated animate__fadeIn">
+
+  <!-- USERS -->
+  <section>
+    <ion-grid fixed >
+      <ion-row>
+        <ion-col size="12">
+          <h1>Area Admins.</h1>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-list>
+      <ion-item *ngFor="let area of areas">
+        <ion-label>{{ area.name }}</ion-label>
+        <ion-select (ionChange)="updateAdmin( area._id, $event )" [value]="getAdminOfArea( area._id )">
+          <ion-select-option *ngFor="let user of users" [value]="user._id">{{user.nombre + ' ' + user.apellido_paterno + ' ' + user.apellido_materno}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+  </section>
+
+  <!-- AREAS -->
+  <section>
+    <ion-grid fixed >
+      <ion-row>
+        <ion-col size="12">
+          <h1>Areas</h1>
+          <ion-button class="save-button" (click)="onSaveAreas()">
+            Save changes
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed>
+      <ion-row>
+
+        <ion-col size="6">
+          <h2>Active</h2>
+          <ion-grid fixed>
+
+            <div class="drop-container" [style]="activeAreas == [] ? 'background-color: rgba($color: white, $alpha: 0.1);' : ''" cdkDropList id="activeAreas" [cdkDropListConnectedTo]="['inactiveAreas']" [cdkDropListData]="activeAreas" (cdkDropListDropped)="drop( $event )">
+              <ion-row>
+                <ion-col class="area-column" *ngFor="let area of activeAreas" size-md>
+                  <div class="area active" (click)="GoToAdmin( area._id )" cdkDrag>
+                    <h4 class="area-name">{{ area.name }}</h4>  
+                    <ion-icon class="area-icon" [name]="area.icon"></ion-icon>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+
+            <ion-row>
+              <ion-col class="area-column" size="12">
+                <div class="area create" (click)="newArea()">
+                  <h4 class="area-name">New</h4>
+                  <ion-icon class="area-icon" name="add-circle-outline"></ion-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+
+        <ion-col size="6">
+          <h2>Inactive</h2>
+          <ion-grid fixed>
+            <div class="drop-container" cdkDropList id="activeAreas" cdkDropList id="inactiveAreas" [cdkDropListConnectedTo]="['activeAreas']" [cdkDropListData]="inactiveAreas" (cdkDropListDropped)="drop( $event )">
+              <ion-row>
+                <ion-col *ngFor="let area of inactiveAreas">
+                  <div class="area inactive" routerLink="/admin-dashboard" cdkDrag>
+                    <h4 class="area-name">{{ area.name }}</h4>
+                    <ion-icon class="area-icon" [name]="area.icon"></ion-icon>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- Subareas -->
+  <section>
+    <ion-grid fixed >
+      <ion-row>
+        <ion-col size="12">
+          <h1>Sub areas</h1>
+          <ion-button class="save-button" (click)="onSaveSubAreas()">
+            Save changes
+          </ion-button>
+          <ion-button class="save-button" (click)="onNewSubArea()">
+            Create a subarea
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed>
+      <ion-row>
+
+        <ion-list class="subareas-list">
+
+          <!-- Para cada una de las áreas -->
+          <ion-item-group *ngFor="let area of areas">
+            <ion-item-divider class="area-divider">
+              <ion-label>{{ area.name }}</ion-label>
+            </ion-item-divider>
+
+            <ion-item *ngFor="let topic of area.subareas" class="subarea">
+              <ion-toggle [(ngModel)]="topic.active" mode="ios"></ion-toggle>
+              <ion-label class="subarea-name">{{ topic.name }}</ion-label>
+            </ion-item>
+          </ion-item-group>
+        </ion-list>
+
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- TYPES OF REPORTS -->
+  <section>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          <h1>Types of reports</h1>
+          <ion-button class="save-button" (click)="onSaveReports()">
+            Save changes
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed>
+      <ion-row>
+
+        <ion-col size="6">
+          <h2>Active</h2>
+          <ion-grid fixed>
+
+            <div class="drop-container" cdkDropList id="activeReports" [cdkDropListConnectedTo]="['inactiveReports']" [cdkDropListData]="activeReports" (cdkDropListDropped)="drop( $event )">
+              <ion-row>
+                <ion-col class="area-column" *ngFor="let report of activeReports">
+                  <div class="area active" cdkDrag>
+                    <h4 class="area-name">{{ report.name | titlecase }}</h4>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+
+            <ion-row>
+              <ion-col class="area-column" size="12">
+                <div class="area create" (click)="newReport()">
+                  <h4 class="area-name">New</h4>
+                  <ion-icon class="area-icon" name="add-circle-outline"></ion-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+
+        <ion-col size="6">
+          <h2>Inactive</h2>
+          <ion-grid fixed>
+            <div class="drop-container" cdkDropList id="inactiveReports" [cdkDropListConnectedTo]="['activeReports']" [cdkDropListData]="inactiveReports" (cdkDropListDropped)="drop( $event )">
+              <ion-row>
+                <ion-col *ngFor="let report of inactiveReports">
+                  <div class="area inactive" cdkDrag>
+                    <h4 class="area-name">{{ report.name | titlecase }}</h4>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- Aquí van las gráficas -->
+  <section>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="11">
+          <h1>Data</h1>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+      <ion-row style="display: flex; align-items: center;">
+        <ion-col size="12" size-md="7">
+          <ion-card class="graph">
+            <ion-card-header>
+              <ion-card-title>Feedbacks per Area</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <canvas #areaChart height="250"></canvas>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="5">
+          <ion-row>
+            <ion-col size="12">
+              <ion-card class="graph">
+                <ion-card-header>
+                  <ion-card-title>Feedbacks Quantity</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  <canvas #barChart height="250"></canvas>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col size="12" >
+              <ion-card class="graph">
+                <ion-card-header>
+                  <ion-card-title>User Satisfaction</ion-card-title>
+                  <ion-card-subtitle>This Month</ion-card-subtitle>
+                </ion-card-header>
+                <ion-card-content>
+                  <ion-label class="percent">{{this.rating}}</ion-label>
+                  <canvas #doughnutChart height="231"></canvas>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- Sacar un reporte -->
+  <section class="report-button-section">
+    <ion-button class="report-button" (click)="downloadReport()">
+      DOWNLOAD THE FULL DATA
+    </ion-button>
+  </section>
+
+</ion-content>

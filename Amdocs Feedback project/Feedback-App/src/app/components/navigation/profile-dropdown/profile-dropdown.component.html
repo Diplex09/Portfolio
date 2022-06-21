@@ -1,0 +1,31 @@
+<ion-grid>
+  <ion-row class="profile">
+    <ion-col size="3">
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-col>
+    <ion-col>
+      <div>
+        <ion-label class="name">{{user?.nombre}} {{user?.apellido_paterno}}</ion-label> <br>
+        <ion-label class="position">{{user?.job_title}}</ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="list">
+    <ion-col>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-label (click)="onProfile()" class="my-profile-button">My Profile</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-row class="sign-out">
+    <ion-col class="align-center">
+      <ion-button (click)="signOut()" color="danger">
+        <ion-icon name="log-out-outline"></ion-icon> Sign out
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

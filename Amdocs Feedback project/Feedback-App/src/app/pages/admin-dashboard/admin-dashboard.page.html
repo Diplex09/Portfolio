@@ -1,0 +1,136 @@
+<header>
+  <app-navigation [currentRouteIndex]="0"></app-navigation>
+</header>
+
+<ion-content class="animate__animated animate__fadeIn">
+
+  <ion-grid fixed>
+    <ion-row>
+
+      <ion-col>
+
+        <!-- Title -->
+        <ion-row>
+          <ion-col class="title animate__animated animate__fadeInDown animate__fast">
+            <ion-title>
+              <ion-icon [name]="area?.icon"></ion-icon>
+              {{ area?.name }}
+            </ion-title>
+          </ion-col>
+        </ion-row>
+
+        <!-- Feedbacks Info -->
+        <header>
+          <ion-toolbar>
+            <ion-title>Tickets Info</ion-title>
+          </ion-toolbar>
+        </header>
+        <ion-row class="feedback-cards animate__animated animate__fadeInUp animate__fast">
+          <ion-col size-md="4" size="6">
+            <ion-card color="amdocs-salmon">
+              <ion-card-header>
+                <ion-card-title>
+                  4
+                </ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Unread Tickets
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size-md="4" size="6">
+            <ion-card color="amdocs-secondary">
+              <ion-card-header>
+                <ion-card-title>
+                  7
+                </ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Active Tickets
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+
+        <!-- Data -->
+        <header>
+          <ion-toolbar>
+            <ion-title>Data</ion-title>
+          </ion-toolbar>
+        </header>
+        <section class="animate__animated animate__fadeInUp animate__fast">
+          <ion-row>
+            <ion-col size="12" size-md="6">
+              <ion-card class="graph">
+                <ion-card-header>
+                  <ion-card-title>Tickets Quantity</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  <canvas #barChart height="250"></canvas>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col size="12" size-md="6">
+              <ion-card class="graph">
+                <ion-card-header>
+                  <ion-card-title>User Satisfaction</ion-card-title>
+                  <ion-card-subtitle>This Month</ion-card-subtitle>
+                </ion-card-header>
+                <ion-card-content>
+                  <ion-label class="percent">{{this.rating}}</ion-label>
+                  <canvas #doughnutChart height="231"></canvas>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </section>
+
+
+        <!-- Last Feedbacks Table -->
+        <section class="past-feedbacks">
+          <header>
+            <ion-toolbar>
+              <ion-title>Past Tickets</ion-title>
+            </ion-toolbar>
+          </header>
+          <ion-row>
+            <ion-col>
+              <app-reports-table [limit]="4" [areas]="areas" [subareas]="subareas" [tickets]="tickets"></app-reports-table>
+            </ion-col>
+          </ion-row>
+        </section>
+
+        <section>
+          <!-- Add Feedback -->
+        <ion-row class="add-feedback">
+
+          <ion-col class="add-feedback-text">
+            <div>
+              <ion-label class="add-feedback-title"> Create Ticket </ion-label> <br>
+              <ion-label> Submit a new Ticket to an area. </ion-label> <br>
+              <div class="add-feedback-button no-outline" routerLink="/feedback">
+                <ion-button color="danger" mode="md" class="no-outline">
+                  <ion-icon name="add-outline"></ion-icon>
+                </ion-button>
+                <ion-label> New Ticket </ion-label>
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col class="add-feedback-image">
+            <ion-img src="../../../assets/feedback.png"></ion-img>
+          </ion-col>
+
+        </ion-row>
+        </section>
+        
+      </ion-col>
+
+      <!-- Calendar -->
+      <ion-col size-md="3" size="12" class="animate__animated animate__fadeInRight animate__fast">
+        <app-calendar></app-calendar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

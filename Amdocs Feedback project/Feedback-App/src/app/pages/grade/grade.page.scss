@@ -1,0 +1,146 @@
+.title {
+    // Mobile
+    @media (max-width: 800px) {
+        font-size: 2.5em;
+    }
+    
+    // Desktop
+    @media (min-width: 800px) {
+        font-size: 4.5em;
+        margin: 0;
+        padding: 10px 0 5px;
+    }
+}
+
+.subtitle {
+    // Mobile
+    @media (max-width: 800px) {
+        font-size: 1.5em;
+    }
+    
+    // Desktop
+    @media (min-width: 800px) {
+        font-size: 2em;
+        margin: 0;
+        padding: 10px 0 10px;
+    }
+}
+
+.logo {
+    // Mobile
+    @media (max-width: 800px) {
+        max-width: 80%;
+        padding: 10px 0;
+        margin-top: 30px;
+    }
+
+    // Desktop
+    @media (min-width: 800px) {
+        max-width: 30%;
+        padding: 30px 0 15px;
+    }
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    // Mobile
+    @media (max-width: 800px) {
+        background: linear-gradient(var(--ion-background-color), #00FFFF);
+        margin: 30px auto 0;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    // Desktop
+    @media (min-width: 800px) {
+        background: linear-gradient( #1EC9FF, #00F3DD );
+        border-radius: 50px;
+        width: 70%;
+        min-height: 50vh;
+        margin: 20px auto;
+        text-align: center;
+    }
+}
+
+.range {
+    // Mobile
+    @media (max-width: 800px) {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    // Desktop
+    @media (min-width: 800px) {
+        width: 70%;
+        margin: 20px auto;
+    }
+}
+
+ion-range {
+    // Mobile
+    @media (max-width: 800px) {
+        --bar-background: grey;    
+        --bar-background-active: #FFFFFF;
+        --bar-height: 2px;
+    }
+
+    // Desktop
+    @media (min-width: 800px) {
+        --bar-background: #FFFFFF;    
+        --bar-background-active: #000000;
+        --bar-height: 2px;
+    }
+}
+
+.feeling {
+    // Mobile
+    @media (max-width: 800px) {
+        width: 40%;
+        margin: 40px auto 10px;
+    }
+
+    // Desktop
+    @media (min-width: 800px) {
+        width: 20%;
+        margin: 40px auto 10px;
+    }
+}
+
+ion-icon {
+    // Mobile
+    @media (max-width: 800px) {
+        color: white;
+    }
+
+    // Desktop
+    @media (min-width: 800px) {
+        color: black;
+    }
+}
+
+ion-button {
+    text-transform: uppercase;
+
+    // Mobile
+    @media (max-width: 800px) {
+        --color: white;
+        --border-color: white;
+        margin-bottom: 30px;
+    }
+
+    // Desktop
+    @media (min-width: 800px) {
+        --color: black;
+        --border-color: black;
+        margin-bottom: 30px;
+    }
+}
+
+.grade {
+    font-weight: 900; 
+    font-size: 8rem;
+}
