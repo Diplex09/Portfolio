@@ -1,0 +1,8 @@
+(define (#t'a))
+1.2'2#f
+asasasas;;comentario
+
+'
+' ' 'aaa v '	''' ñpo' 'lokl '/' / '*
+
+;       ;      ;

@@ -1,0 +1,9 @@
+(define clam 17)
+
+clam          => 17
+
+(define clam 23)  ; this rebinds clam to 23
+
+(+ clam 1) => 24
+(define bert '(a b c))
+(define ernie bert)  

@@ -1,0 +1,5 @@
+clearInterval(interval);
+testArea.value = '';
+timerRunning = false;
+testWrapper.style.borderColor = "grey";
+theTimer.innerHTML = "00:00:00";

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+	<title>DFA SYNTATIC HIGHLIGHTER</title>
+</head>
+
+<body>
+	<main class="no-space">
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">name</span>
+		<span>&nbsp</span>
+		<span class="identifiers">param1</span>
+		<span class="operators">-</span>
+		<span class="identifiers">param2</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;(,&nbsp;define,&nbsp;(,&nbsp;variable,&nbsp;variable,&nbsp;operador,&nbsp;variable,&nbsp;),&nbsp;),&nbsp;comentario</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="identifiers">body</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;&nbsp;&nbsp;aquí;&nbsp;&nbsp;&nbsp;ocurre&nbsp;&nbsp;&nbsp;la-mágia&nbsp;-&nbsp;variable,&nbsp;comentario</span>
+		<span><br></span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;(,&nbsp;comentario</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">name</span>
+		<span>&nbsp</span>
+		<span class="symbols">'a)</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;(,&nbsp;variable,&nbsp;símbolo,&nbsp;comentario</span>
+		<span><br></span>
+		<span><br></span>
+		<span><br></span>
+		<span class="symbols">'name+1</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="operators">-</span>
+		<span class="identifiers">name</span>
+		<span class="operators">*</span>
+		<span class="numbers">3</span>
+		<span class="operators">^</span>
+		<span class="numbers">4</span>
+		<span class="operators">/</span>
+		<span class="numbers">5.2</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;símbolo,&nbsp;operador,&nbsp;variable,&nbsp;operador,&nbsp;número,&nbsp;operador,&nbsp;número,&nbsp;operador,&nbsp;número,&nbsp;comentario</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="errors">#t#f</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;error,&nbsp;comentario</span>
+		<span><br></span>
+		<span class="errors">1.2ebc</span>
+		<span class="operators">+</span>
+		<span class="logicals">#f</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;error,&nbsp;operador,&nbsp;falso,&nbsp;comentario</span>
+		<span><br></span>
+		<span class="symbols">'(#t+#f)</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;símbolo,&nbsp;comentario</span>
+		<span><br></span>
+		<span class="errors">hol@2</span>
+		<span class="operators">-</span>
+		<span class="identifiers">mundo2</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;error,&nbsp;operador,&nbsp;variable,&nbsp;comentario</span>
+		<span><br></span>
+	</main>
+</body>
+</html>
