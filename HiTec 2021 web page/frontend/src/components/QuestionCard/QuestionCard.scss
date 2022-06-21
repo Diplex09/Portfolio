@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+
+button {
+  transition: all 0.25s;
+  border: none;
+}
+
+.QuestionCard {
+  position: absolute;
+  width: 550px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+
+  textarea {
+    width: 95%;
+    height: 100px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 15px;
+    padding: 1em 2.5%;
+    background: white;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 250px;
+  }
+
+  .navigation {
+    width: 100%;
+    margin-bottom: 1em;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    button {
+      width: 50px;
+      height: 50px;
+      font-family: "Work Sans", sans-serif;
+      font-size: 1.25em;
+      font-weight: bold;
+      border-radius: 50%;
+      color: #505050;
+      background: #b9b9b9;
+      box-shadow: 0 5px 1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    button.active {
+      background: #E8E8E8;
+      color: #3A62B1;
+      transform: scale(1.1);
+
+    }
+  }
+
+  .question-content {
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 1.5em;
+    background: #F2F2F2;
+    text-align: left;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+
+    h1 {
+      font-size: 1.5em;
+      margin: 0.5em 0;
+    }
+  }
+
+  .options-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 30px;
+
+    button {
+      padding: 1em 1em;
+      border-radius: 25px;
+      background: #FAFAFA;
+      box-shadow: 0 5px 1px 0 rgba(0,0,0,0.05);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background-color: #3A62B1;
+      box-shadow: 0 0 1px 0 rgba(0,0,0,0.05);
+      color: white;
+    }
+
+    button.active {
+      background: #3A62B1;
+      color: white;
+    }
+  }
+
+  #nav-buttons {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 1em 0;
+
+    button, a {
+      background-color: transparent;
+      padding: 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5em;
+      font-family: "Work Sans", sans-serif;
+      color: white;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .QuestionCard {
+    width: 100%;
+    height: 100%;
+
+    .question-content {
+      border-radius: 0;
+      height: 80%;
+      overflow-y: scroll;
+
+    }
+
+    .navigation {
+      flex-grow: 1;
+
+      margin: 0;
+
+      button {
+        flex: 1;
+        box-shadow: none;
+        height: 100px;
+        font-size: 1.5em;
+        border-radius: 0;
+      }
+
+      button:hover {
+        transform: scale(1);
+      }
+
+      button.active {
+        transform: scale(1);
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .QuestionCard {
+
+    .options-content {
+      grid-template-columns: repeat(1, 1fr);
+
+      button {
+        padding: 1.5em 1em;
+        font-size: 1.25em;
+        border-radius: 25px;
+        grid-gap: 20px;
+      }
+    }
+
+    #nav-buttons {
+      width: 100%;
+      margin: auto;
+      background-color: #b9b9b9;
+      position:fixed;
+      bottom: 0;
+      left: 0;
+      button {
+        font-size: 2em;
+        margin: 0 1em;
+      }
+
+    }
+  }
+}
