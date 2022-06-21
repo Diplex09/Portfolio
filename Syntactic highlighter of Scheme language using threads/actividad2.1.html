@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+	<title>DFA SYNTATIC HIGHLIGHTER</title>
+</head>
+
+<body>
+	<main class="no-space">
+		<span class="comments">;&nbsp;&nbsp;&nbsp;Abraham&nbsp;Mendoza&nbsp;A01</span>
+		<span><br></span>
+		<span class="comments">;&nbsp;&nbsp;&nbsp;Aldo&nbsp;Degollado&nbsp;A01</span>
+		<span><br></span>
+		<span class="comments">;&nbsp;&nbsp;&nbsp;Luis&nbsp;Alonso&nbsp;Martínez&nbsp;García&nbsp;A01636255</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="comments">;&nbsp;1.&nbsp;La&nbsp;funcion&nbsp;'fahrenheit-to-celsius'&nbsp;toma&nbsp;como&nbsp;entrada&nbsp;una&nbsp;temperatura&nbsp;f&nbsp;en&nbsp;grados&nbsp;Fahrenheit&nbsp;</span>
+		<span><br></span>
+		<span class="comments">;&nbsp;y&nbsp;la&nbsp;convierte&nbsp;a&nbsp;su&nbsp;equivalente&nbsp;en&nbsp;grados</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">fahrenheit</span>
+		<span class="operators">-</span>
+		<span class="identifiers">to</span>
+		<span class="operators">-</span>
+		<span class="identifiers">celsius</span>
+		<span>&nbsp</span>
+		<span class="identifiers">f</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">exact</span>
+		<span class="operators">-</span>
+		<span class="errors">>inexact</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">*</span>
+		<span>&nbsp</span>
+		<span class="numbers">5</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">-</span>
+		<span>&nbsp</span>
+		<span class="identifiers">f</span>
+		<span>&nbsp</span>
+		<span class="numbers">32</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">9</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="comments">;&nbsp;2.&nbsp;La&nbsp;funcion&nbsp;'sign'&nbsp;recibe&nbsp;como&nbsp;entrada&nbsp;un&nbsp;valor&nbsp;entero&nbsp;n.&nbsp;Devuelve&nbsp;-1&nbsp;si&nbsp;n&nbsp;es&nbsp;negativo,&nbsp;1&nbsp;si&nbsp;n&nbsp;es&nbsp;positivo&nbsp;mayor</span>
+		<span><br></span>
+		<span class="comments">;&nbsp;que&nbsp;cero,&nbsp;o&nbsp;0&nbsp;si&nbsp;n&nbsp;es&nbsp;cero.</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">sign</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cond</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="operators">=</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="numbers">0</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">0</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">></span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="numbers">0</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">1</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors"><</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="numbers">0</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="operators">-</span>
+		<span class="numbers">1</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="comments">;3.&nbsp;La&nbsp;funcion&nbsp;roots&nbsp;devuelve&nbsp;la&nbsp;raız&nbsp;que&nbsp;resuelve&nbsp;una&nbsp;ecuacion&nbsp;cuadratica&nbsp;a&nbsp;partir&nbsp;de&nbsp;</span>
+		<span><br></span>
+		<span class="comments">;sus&nbsp;tres&nbsp;coeficiente,&nbsp;a,&nbsp;b&nbsp;y&nbsp;c,&nbsp;que&nbsp;se&nbsp;reciben&nbsp;como&nbsp;entrada.</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">roots</span>
+		<span>&nbsp</span>
+		<span class="identifiers">a</span>
+		<span>&nbsp</span>
+		<span class="identifiers">b</span>
+		<span>&nbsp</span>
+		<span class="identifiers">c</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="identifiers">discriminant</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">lambda</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">a</span>
+		<span>&nbsp</span>
+		<span class="identifiers">b</span>
+		<span>&nbsp</span>
+		<span class="identifiers">c</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">sqrt</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">-</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">square</span>
+		<span>&nbsp</span>
+		<span class="identifiers">b</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">*</span>
+		<span>&nbsp</span>
+		<span class="numbers">4</span>
+		<span>&nbsp</span>
+		<span class="identifiers">a</span>
+		<span>&nbsp</span>
+		<span class="identifiers">c</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="identifiers">square</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">lambda</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">n</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">*</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">+</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">-</span>
+		<span>&nbsp</span>
+		<span class="identifiers">b</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">discriminant</span>
+		<span>&nbsp</span>
+		<span class="identifiers">a</span>
+		<span>&nbsp</span>
+		<span class="identifiers">b</span>
+		<span>&nbsp</span>
+		<span class="identifiers">c</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">*</span>
+		<span>&nbsp</span>
+		<span class="numbers">2</span>
+		<span>&nbsp</span>
+		<span class="identifiers">a</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="comments">;4.&nbsp;El&nbsp;&nbsp;́ındice&nbsp;de&nbsp;masa&nbsp;corporal,&nbsp;o&nbsp;BMI&nbsp;por&nbsp;sus&nbsp;siglas&nbsp;in&nbsp;ingl&nbsp;́es,&nbsp;se&nbsp;utiliza&nbsp;para&nbsp;determinar&nbsp;si&nbsp;la&nbsp;proporcion</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="comments">;&nbsp;de&nbsp;peso&nbsp;y&nbsp;altura&nbsp;de&nbsp;una&nbsp;persona&nbsp;es&nbsp;adecuada.&nbsp;</span>
+		<span><br></span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">bmi</span>
+		<span>&nbsp</span>
+		<span class="identifiers">w</span>
+		<span>&nbsp</span>
+		<span class="identifiers">h</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="identifiers">square</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">lambda</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">n</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">*</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cond</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors"><</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="identifiers">w</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">square</span>
+		<span>&nbsp</span>
+		<span class="identifiers">h</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">20</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="symbols">'underweight)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">and</span>
+		<span class="special-chars">(</span>
+		<span class="errors">></span>
+		<span class="operators">=</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="identifiers">w</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">square</span>
+		<span>&nbsp</span>
+		<span class="identifiers">h</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">20</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="errors"><</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="identifiers">w</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">square</span>
+		<span>&nbsp</span>
+		<span class="identifiers">h</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">25</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="symbols">'normal)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">and</span>
+		<span class="special-chars">(</span>
+		<span class="errors">></span>
+		<span class="operators">=</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="identifiers">w</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">square</span>
+		<span>&nbsp</span>
+		<span class="identifiers">h</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">25</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="errors"><</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="identifiers">w</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">square</span>
+		<span>&nbsp</span>
+		<span class="identifiers">h</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">30</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="symbols">'obese1)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">and</span>
+		<span class="special-chars">(</span>
+		<span class="errors">></span>
+		<span class="operators">=</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="identifiers">w</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">square</span>
+		<span>&nbsp</span>
+		<span class="identifiers">h</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">30</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="errors"><</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="identifiers">w</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">square</span>
+		<span>&nbsp</span>
+		<span class="identifiers">h</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">40</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="symbols">'obese2)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">></span>
+		<span class="operators">=</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">/</span>
+		<span>&nbsp</span>
+		<span class="identifiers">w</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">square</span>
+		<span>&nbsp</span>
+		<span class="identifiers">h</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="numbers">40</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="symbols">'obese3))</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="comments">;6.&nbsp;La&nbsp;función&nbsp;duplica&nbsp;te&nbsp;toma&nbsp;una&nbsp;lista&nbsp;lst&nbsp;como&nbsp;entrada&nbsp;y&nbsp;devuelve&nbsp;una&nbsp;nueva&nbsp;lista&nbsp;en&nbsp;donde&nbsp;cada&nbsp;elemento&nbsp;de&nbsp;lst&nbsp;está&nbsp;duplicado.</span>
+		<span><br></span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">duplicate</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">if</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="errors">null?</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="symbols">'()</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cons</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cons</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">duplicate</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="comments">;10.&nbsp;La&nbsp;función&nbsp;positives&nbsp;toma&nbsp;una&nbsp;lista&nbsp;de&nbsp;números&nbsp;lst&nbsp;como&nbsp;entrada&nbsp;y&nbsp;devuelve&nbsp;una&nbsp;nueva&nbsp;lista&nbsp;que&nbsp;solocontiene&nbsp;los&nbsp;n&nbsp;́umeros&nbsp;</span>
+		<span><br></span>
+		<span class="comments">;positivos&nbsp;de&nbsp;lst.</span>
+		<span><br></span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">positives</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cond</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">null?</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="symbols">'())</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">negative?</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">positives</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">else</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cons</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">positives</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+	</main>
+</body>
+</html>

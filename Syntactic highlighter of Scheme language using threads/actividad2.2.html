@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+	<title>DFA SYNTATIC HIGHLIGHTER</title>
+</head>
+
+<body>
+	<main class="no-space">
+		<span class="comments">;&nbsp;&nbsp;&nbsp;Abraham&nbsp;Mendoza&nbsp;A01274857</span>
+		<span><br></span>
+		<span class="comments">;&nbsp;&nbsp;&nbsp;Aldo&nbsp;Degollado</span>
+		<span><br></span>
+		<span class="comments">;&nbsp;&nbsp;&nbsp;Luis&nbsp;Alonso&nbsp;Martínez&nbsp;García&nbsp;A01636255</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="comments">;1.&nbsp;La&nbsp;funcion&nbsp;insert&nbsp;toma&nbsp;dos&nbsp;entradas:&nbsp;un&nbsp;numero&nbsp;n&nbsp;y&nbsp;una&nbsp;lista&nbsp;lst&nbsp;que&nbsp;contiene&nbsp;numeros&nbsp;en&nbsp;orden&nbsp;ascendente.</span>
+		<span><br></span>
+		<span class="comments">;Devuelve&nbsp;una&nbsp;nueva&nbsp;lista&nbsp;con&nbsp;los&nbsp;mismos&nbsp;elementos&nbsp;de&nbsp;lst&nbsp;pero&nbsp;con&nbsp;n&nbsp;insertado&nbsp;en&nbsp;su&nbsp;lugar&nbsp;correspondiente.</span>
+		<span><br></span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">insert</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cond</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">null?</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">list</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">></span>
+		<span class="operators">=</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cons</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">else</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cons</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">insert</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="comments">;&nbsp;3.&nbsp;La&nbsp;funcion&nbsp;deep-reverse&nbsp;toma&nbsp;una&nbsp;lista&nbsp;como&nbsp;entrada.&nbsp;Devuelve&nbsp;una&nbsp;lista&nbsp;con&nbsp;los&nbsp;mismos&nbsp;elementos&nbsp;que&nbsp;su</span>
+		<span><br></span>
+		<span class="comments">;&nbsp;entrada&nbsp;pero&nbsp;en&nbsp;orden&nbsp;inverso.&nbsp;Si&nbsp;hay&nbsp;listas&nbsp;anidadas,&nbsp;estas&nbsp;tambien&nbsp;se&nbsp;invierten.</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">rotate</span>
+		<span class="operators">-</span>
+		<span class="identifiers">left</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cond</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">null?</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="operators">=</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="numbers">0</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">negative?</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">rotate</span>
+		<span class="operators">-</span>
+		<span class="identifiers">left</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">+</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="numbers">1</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">append</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">list</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">reverse</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">reverse</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">reverse</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">else</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">rotate</span>
+		<span class="operators">-</span>
+		<span class="identifiers">left</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">-</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="numbers">1</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">append</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">list</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="comments">;&nbsp;6.&nbsp;La&nbsp;función&nbsp;rotate-left&nbsp;toma&nbsp;dos&nbsp;entradas:&nbsp;un&nbsp;número&nbsp;entero&nbsp;n&nbsp;y&nbsp;una&nbsp;lista&nbsp;lst.&nbsp;Devuelve&nbsp;la&nbsp;lista&nbsp;que&nbsp;resulta&nbsp;de&nbsp;rotar&nbsp;lst&nbsp;un&nbsp;total&nbsp;</span>
+		<span><br></span>
+		<span class="comments">;&nbsp;de&nbsp;n&nbsp;elementos&nbsp;a&nbsp;la&nbsp;izquierda.&nbsp;Si&nbsp;n&nbsp;es&nbsp;negativo,&nbsp;rota&nbsp;hacia&nbsp;la&nbsp;derecha.</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">deep</span>
+		<span class="operators">-</span>
+		<span class="identifiers">reverse</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">deep</span>
+		<span class="operators">-</span>
+		<span class="identifiers">reverseR</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span>&nbsp</span>
+		<span class="identifiers">acc</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">if</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="errors">null?</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="identifiers">acc</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">if</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="errors">list?</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">deep</span>
+		<span class="operators">-</span>
+		<span class="identifiers">reverseR</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cons</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">deep</span>
+		<span class="operators">-</span>
+		<span class="identifiers">reverse</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="identifiers">acc</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">deep</span>
+		<span class="operators">-</span>
+		<span class="identifiers">reverseR</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cons</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="identifiers">acc</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">deep</span>
+		<span class="operators">-</span>
+		<span class="identifiers">reverseR</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span>&nbsp</span>
+		<span class="symbols">'())</span>
+		<span><br></span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span><br></span>
+		<span class="special-chars">(</span>
+		<span class="reserved-words">define</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">rotate</span>
+		<span class="operators">-</span>
+		<span class="identifiers">left</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cond</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">null?</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="operators">=</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="numbers">0</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="special-chars">(</span>
+		<span class="errors">negative?</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">rotate</span>
+		<span class="operators">-</span>
+		<span class="identifiers">left</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">+</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="numbers">1</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">append</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">list</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">reverse</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">reverse</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">reverse</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">else</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">rotate</span>
+		<span class="operators">-</span>
+		<span class="identifiers">left</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="operators">-</span>
+		<span>&nbsp</span>
+		<span class="identifiers">n</span>
+		<span>&nbsp</span>
+		<span class="numbers">1</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">append</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">cdr</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">list</span>
+		<span>&nbsp</span>
+		<span class="special-chars">(</span>
+		<span class="identifiers">car</span>
+		<span>&nbsp</span>
+		<span class="identifiers">lst</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span class="special-chars">)</span>
+		<span><br></span>
+	</main>
+</body>
+</html>
