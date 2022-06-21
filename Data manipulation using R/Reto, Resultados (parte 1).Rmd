@@ -1,0 +1,31 @@
+---
+title: "Reto,resultados,parte 1)"
+output: html_notebook
+---
+
+```{r}
+#Cargar archivo
+setwd("C:/Users/Aldo/Desktop/Tec de Monterrey/Actividades/Semestre 2/Bloque 2/Biología Computacional/Bases de datos")
+all_samples_diff <-load(file = "Multi_Cancer_Data.RData")
+#Todas las muestras normales y de tumor de colon/recto separadas
+tumor_colon <- grep("Tumor__Colorectal",colnames(multi_cancer_data))
+normal_colon <- grep("Normal__Colon", colnames(multi_cancer_data))
+#Se genera una matriz con la media normal, media del tumor y sus diferencias por gen para cancer de colorectal
+colon_samples_diff <- t(apply(multi_cancer_data, 1, function(x){
+  m_tumor <- mean(x[tumor_colon], na.rm=T)
+  m_normal <- mean(x[normal_colon], na.rm=T)
+  diff_m <- abs(m_tumor - m_normal)
+  c(m_tumor, m_normal, diff_m)
+  }))
+#Asignar nombres a las columnas
+colnames(colon_samples_diff) <- c("Tumor_Colorectal", "Normal_Colorectal", "Diff")
+#Se orden los genes de mayor a menor diferencias
+colon_order_genes <- order(colon_samples_diff[,3], decreasing=T)
+
+#Finalmente, se muestran los diez genes con mayor diferencia de expresión entre tejido normal y tumoroso en el cancer de colon
+TablaTop10 <- colon_samples_diff[colon_order_genes[1:10],]
+data.frame(TablaTop10)
+```
+
+
+```
