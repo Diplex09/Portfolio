@@ -1,7 +1,0 @@
-{
-  "name": "Feedback-App",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
